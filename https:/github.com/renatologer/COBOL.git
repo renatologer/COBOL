@@ -1,0 +1,37 @@
+      ******************************************************************
+      * Author:
+      * Date:
+      * Purpose:
+      * Tectonics: cobc
+      ******************************************************************
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. YOUR-PROGRAM-NAME.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       
+       77 WS-TEXTO          PIC x(40) VALUES SPACES.       
+       77 WS-CONTIDO        PIC x(40) VALUES SPACES.
+       77 WS-PONTEIRO       PIC 9(9) VALUES ZEROS.
+       
+       PROCEDURE DIVISION.
+            INITIALIZE WS-TEXTO
+                       WS-CONTIDO. 
+            MOVE 'O LUGAR DE ' TO WS-TEXTO
+            
+            SET  WS-PONTEIRO   TO  12  
+            
+            String                
+                'RENATO'
+                 DELIMITED by SIZE  INTO WS-TEXTO
+                 WITH POINTER WS-PONTEIRO
+            END-String
+            
+            DISPLAY 'WS-TEXTO  ' WS-TEXTO.
+            
+       
+       MAIN-PROCEDURE.
+            DISPLAY "Hello world"
+            STOP RUN.
+       END PROGRAM YOUR-PROGRAM-NAME.
+
